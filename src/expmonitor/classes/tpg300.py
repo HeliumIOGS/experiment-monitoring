@@ -26,7 +26,7 @@ class TPG300(Sensor):
         super().__init__(
             self.type, self.descr, self.unit, self.conversion_fctn, num_prec=12
             )
-        # TPG261-specific setup:
+        # TPG300-specific setup:
         self.arduino_adc = ArduinoADC()
         self.arduino_channel = adc_analog_in
 
