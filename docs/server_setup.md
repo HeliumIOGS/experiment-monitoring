@@ -402,3 +402,10 @@
 
 ## Known bugs and problems
   * The Grafana Image Renderer is not available for the ARM processor of the RaspberryPi. Therefore the alert e-mails do not contain a snapshot of the time series that causes the alert.
+  * The automatic backup service (crontabs) relies on oa-data being mounted. If not, the backup will be stored locally. Each disk image can be be relatively large (>100G), and two of them saturates the `/dev/root/` memory.
+  * To diagnose the problem:
+    - run `-df -hT` to show memory usage of each mounted partition.
+    - if `/dev/root/` is at 100%, try to locate the large files (probably somewhere in `/mnt/`
+    - Make sure you unmount `oa-data` (maybe run `sudo umount -a`, or comment the relevant line in `/etc/fstab/` and reboot)
+    - Delete the files
+    - Reboot
