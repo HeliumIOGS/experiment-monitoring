@@ -46,7 +46,7 @@
 
   * In order to have internet access, declare the MAC address of the RaspberryPi at the [Service Info](https://ticket.institutoptique.fr/front/helpdesk.public.php?create_ticket=1), specifying explicitly that the new machine is a headless RaspberryPi.
 
-  * [Download](https://www.raspberrypi.com/software/operating-systems/) and install `Raspberry Pi OS Lite` on the SD card.
+  * [Download](https://www.raspberrypi.com/software/operating-systems/) and install `Raspberry Pi OS Lite` on the SD card. Reinstallation [02/07/2025], for this step I used the Raspberry Pi Imager software (https://www.raspberrypi.com/software/). You simply have to choose the Raspberry Pi model, the OS: Raspberry Pi OS Lite (32bits), and select the microSD inserted in your computer. It enables you to activate the ssh, username, password etc.. .
 
   * Add an SSH file to the boot SD card:
     <pre>
